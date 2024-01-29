@@ -1,0 +1,3 @@
+	nome	idade
+primeiro	nome1 10
+segundo	nome2 2

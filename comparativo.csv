@@ -1,0 +1,18 @@
+﻿Operação;Lista;Tupla;Set;Dicionário;DataFrame (pandas)
+Insere elementos;lista.append(x);Não aplicável;conjunto.add(x);dicionario[key] = value;df. append(nova_linha, ignore_index=True)
+Exclui elemento;lista.remove(x);Não aplicável;conjunto.remove(x);del dicionario[key];df.drop(index)
+Lista elementos;print(lista);print(tupla);print(conjunto);print(dicionario.values());print(df)
+Lista elemento em posição específica;print(lista[i]);print(tupla[i]);Não aplicável;print(dicionario[key]);print(df.loc[index])
+Verifica se contém determinado elemento;x in lista;x in tupla;x in conjunto;key in dicionario;df['coluna'].isin([x])
+Altera elemento;lista[i] = novo_valor;Não aplicável;Não aplicável;dicionario[key] = novo_valor;"df.at[index, 'coluna'] = novo_valor
+df.loc[index] = row"
+Limpa todo conteúdo;lista.clear();Não aplicável;conjunto.clear();dicionario.clear();df.drop(index, inplace=True)
+Conta quantas vezes determinado elemento aparece;lista.count(x);tupla.count(x);Não aplicável;Não aplicável;df['coluna'].value_counts()
+Adiciona mais de um item;lista.extend(iteravel);Não aplicável;conjunto.update(iteravel);dicionario.update(outro_dicionario);Não aplicável
+Verifica se um subgrupo de itens está contido em outro grupo de itens;set(subgrupo).issubset(set(grupo));all(x in grupo for x in subgrupo);subgrupo.issubset(grupo);Não aplicável;Não aplicável
+Verifica se um grupo de itens contém determinado subgrupo;set(subgrupo).issuperset(set(grupo));all(x in subgrupo for x in grupo);grupo.issuperset(subgrupo);Não aplicável;Não aplicável
+Retorna o índice de um elemento;lista.index(x);tupla.index(x);Não aplicável;Não aplicável;df.index[df['coluna'] == x].tolist()
+Remove o último elemento;lista.pop();Não aplicável;Não aplicável;Não aplicável;df.drop(df.index[-1], inplace=True)
+Remove determinado elemento;lista.remove(x);Não aplicável;conjunto.remove(x);del dicionario[key];df = df[df['coluna'] != x]
+Inverte a ordem;lista.reverse();tupla[::-1];Não aplicável;Não aplicável;df = df[::-1]
+Ordena o conteúdo;lista.sort();Não aplicável;Não aplicável;Não aplicável;df.sort_values(by='coluna', inplace=True)
